@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GeoSoftware1 Assignment 7</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+
+
+
+</head>
+<body onload="onLoad()">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/leaflet/leaflet.css"/>
+  <script src="javascripts/pointcloud.js"></script>
+  <script src="javascripts/point.js"></script>
+  <script src="javascripts/geoJSON.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+
+  <div id="nav-placeholder"></div>
+  <div class="a" align="center">
+    <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <h1>GeoSoftware1 Assignment 7</h1>
+
+  <div>
+  	assignment: 07<br>
+  	course: Geosoftware I SoSe 2020 <br>
+  	authors: Felix Niebl, Nick Jakuschona <br>
+    tests added by: Malte Tiemann, Jonas Raabe <br> <br>
+
+  	{{description pending}}
+  </div>
+  <div id="checkbox">
+  </div>
+
+  <a href="/create">Add More Points</a>
+
+  <br>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" id="nextDepartures">
+    <p id="nextDeparturesHeader"></p>
+    <div class="table-responsive">
+      <table style="width:100%" align="center" id="nextDeparturesTable">
+        <tr>
+          <th>line nr</th>
+          <th>Bus line</th>
+          <th>departure</th>
+        </tr>
+
+      </table>
+    </div>
+    <br/>
+    </div>
+  <div class="col-md-6">
+    <div id="mainMap"></div>
+  </div>
+</div>
+  </div>
+  <br>
+  <div class="table-responsive">
+    <table style="width:75%" align="center" id="resultTable">
+      <tr>
+        <th>Bus stop name</td>
+        <th>Coordinates</td>
+        <th>Distance (in meters)</td>
+        <th>Bearing</td>
+      </tr>
+    </table>
+  </div>
+
+  </div>
+  <br>
+
+
+
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="/leaflet/leaflet.js"></script>
+  <script src="/leaflet-heat/leaflet-heat.js"></script>
+  <script src="javascripts/tokens.js"></script>
+  <script src="javascripts/script.js"></script>
+  <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+  <script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
+  <script src="javascripts/tests.js"></script>
+</body>
+</html>

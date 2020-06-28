@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/leaflet-draw/leaflet.draw.css" />
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/leaflet/leaflet.js"></script>
+    <script src="/leaflet-draw/leaflet.draw.js"></script>
+
+
+
+
+    <title>Leaflet Draw plugin</title>
+</head>
+
+<body onload="onload()">
+    <div id="nav-placeholder"></div>
+
+    <div class="a">
+    address search: <br>
+    <input id="addressSearch"></input>, Münster
+    <button class="button" type="button" onclick="searchAddress()">search address</button>
+    <br><br>
+
+    current position geojson: <br>
+    <button class="button" type="button" onclick="getLocation()">my geolocation</button>
+    <p>With this function a point can be drawn on the map and as result the corresponding GeoJson is displayed on the
+        right side.</p>
+</div>
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="map" style="width: 100%; height: 400px; float: left;"></div>
+                <br />
+            </div>
+            <div id="data" class="col-md-6">
+                <textarea id="geojsontextarea" style="width: 100%; height: 400px;"
+                    onchange="onChange()"></textarea><br />
+            </div>
+        </div>
+    </div>
+    <button class="button" onclick="save()">Save in MongoDB</button>
+    <button class="button" onclick="getData()">Get Data saved in MongoDB</button>
+    <button class="button" onclick="deleteAll()">Delete all Points saved in MongoDB</button>
+
+    <button class="button" onclick="update()">Update the Point with ID</button>
+    <button class="button" onclick="deleteOne()">Delete the Point with ID</button>
+    ID: <textarea id="id"></textarea>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="javascripts/tokens.js"></script>
+    <script src="javascripts/geoJSON.js"></script>
+    <script src="javascripts/point_editor.js"></script>
+
+</body>
+
+</html>
